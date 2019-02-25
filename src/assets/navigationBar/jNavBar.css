@@ -1,0 +1,121 @@
+/* navigation frame */
+.jnav-container{
+    background-color: #333;
+    border-color: #080808;
+    border-width: 0 0 1px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;    
+    font-size: 2.5vh;
+    
+}
+
+.right-align{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* wide screen */
+#horizonNav{
+    padding: 1.5vh 3vh;
+    
+}
+.jnav-container ul{    
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-left: 2vh;    
+
+}
+.jnav-container li{
+    float: left; 
+    padding: 0 10px;    
+}
+.jnav-container a{
+    text-decoration: none;
+    color :#9d9d9d;
+    display: block;
+    text-align: center;    
+}
+
+/* items which are not activated */
+.jnav-container a:hover:not(.active){ 
+    background-color: #222;
+    color : white;
+}
+
+/* item hover */
+.jnav-container a.active{ 
+    background-color: #333;
+}
+
+/* narrow screen */
+@media screen and (max-width: 600px) {
+    #horizonNav li {
+        display: none;
+        
+    }
+}
+
+/* wide screen */
+@media (min-width:600px){
+    .toggle-button{
+        display: none;
+        
+    }
+    #verticalNav{
+        display: none;
+    }
+}
+
+/* Custom button  */
+.toggle-button{
+    background-color: #333;
+    border: 1px solid ;
+    border-radius: 5px;
+    padding: 6.5px;
+
+}
+.toggle-icon{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+}
+.toggle-icon + .toggle-icon{
+    margin-top: 0.5vh;
+}
+
+/* button hover */
+.toggle-button:hover{
+    background-color: #555;
+    
+}
+
+/* when narrow screen */
+.show-toggle{
+    display: block;
+    /* position: static;
+    opacity: 1; */
+    
+}
+
+/* when wide screen */
+.hide-toggle{
+    display: none;
+    /* position: absolute;
+    opacity: 0; */
+}
+
+#verticalNav{
+    padding: 0.5vh 3vh;
+
+}
+
+#verticalNav li{
+    float: unset;
+
+}
+
+#verticalNav li + li{
+    margin-top: 0.5vh;
+}
